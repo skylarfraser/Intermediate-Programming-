@@ -33,6 +33,8 @@ public class MinDiff {
 
         for (int i = 0; i < intArray1.length ; i++) {
             int difference = Math.abs(intArray1[i+1] - intArray1[i]);
+            //this takes the difference of the first value subtracted from the second value 
+            //(meaning the first and second numbers in the array)
             int minimumDifference = minDiff(intArray1);
 
             System.out.println("The Min Diff of this is: " + minimumDifference);
