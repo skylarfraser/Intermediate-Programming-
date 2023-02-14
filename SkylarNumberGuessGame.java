@@ -36,21 +36,17 @@ public class SkylarNumberGuessGame {
 
 
 
-        // For loop: A random number is chosen within the given range (which was
-        // previously set by the user)
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = rand.nextInt(minimum, maximum);
-            System.out.println(
-                    "You will have to choose a random number between " + minimum + "and " + maximum + ". Good luck!");
-            System.out.println("Please type in your first guess.");
 
-        }
 
 
             boolean i = true;
             while(i == true){
                 Game1 g = new Game1(minimum, maximum, rand, sc);
-                g.mainGame(sc,  arr[0]);
+                System.out.println(
+                    "You will have to choose a random number between " + minimum + "and " + maximum + ". Good luck!");
+            System.out.println("Please type in your first guess.");
+        
+                g.mainGame(sc);
     
     
             }
