@@ -1,14 +1,13 @@
-import java.util.ArrayList;
-
 
 public class Player {
     //Fields
     long wallet; 
-    ArrayList <Integer> trials = new ArrayList ();
+    int trials;
+  
+    Player (long wallet, int trials){
+        this.wallet = 700000000;
+        this.trials = 0;
 
-
-    Player (long wallet){
-        this.wallet = 98320000;
 
     }
 
