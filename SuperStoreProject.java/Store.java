@@ -21,7 +21,7 @@ public class Store {
 
     public static ArrayList<Item> getFashItems() {
         ArrayList<Item> fash = new ArrayList<Item>();
-        for (int i = 7; i < 10; i++) {
+        for (int i = 0; i < 3; i++) {
             Item fashitem = items.get(i); 
             fash.add(fashitem);
         }
@@ -30,7 +30,7 @@ public class Store {
 
     public static ArrayList<Item> getRealItems() {
         ArrayList<Item> real = new ArrayList<Item>();
-        for (int i = 7; i < 10; i++) {
+        for (int i = 3; i < 6; i++) {
             Item realitem = items.get(i); 
             real.add(realitem);
         }
@@ -41,7 +41,7 @@ public class Store {
 
     public static ArrayList<Item> getMiscItems() {
         ArrayList<Item> miscs = new ArrayList<Item>();
-        for (int i = 7; i < 10; i++) {
+        for (int i = 6; i < 10; i++) {
             Item miscitem = items.get(i); 
             miscs.add(miscitem);
         }
@@ -62,7 +62,7 @@ public class Store {
                 return realitem;
             }
         }
-        for (int i = 7; i < 11; i++) {
+        for (int i = 6; i < 10; i++) {
             Item miscitem = items.get(i); 
             if (miscitem.index == index) {
                 return miscitem;
@@ -91,7 +91,7 @@ public class Store {
 
         System.out.println();
         System.out.println("Miscellaneous:");  
-        for (int i = 7; i< 11; i++){
+        for (int i = 6; i< 10; i++){
             System.out.println(items.get(i).index + " " + items.get(i).label + ", price: " + items.get(i).price + ", count: " + items.get(i).count);
 
 

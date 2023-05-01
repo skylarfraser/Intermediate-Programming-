@@ -28,23 +28,6 @@ public Long mainDiscount(Random rand) {
 
 
 
-/* public void blackFridaySale(ArrayList <Item> items){
-    for (int i = 0; i < 3; i++){
-        long fhalf = items.get(i).price ;
-        this.price -= fhalf;
-    }
-
-    for (int i = 3; i < 6; i++){
-        long rhalf = items.get(i).price;
-        this.price -= rhalf;
-    }
-
-    for(int i = 6; i < 10; i++){
-        long mhalf = items.get(i).price;
-        this.price -= mhalf;
-    }
-} */
-
 
 }
 

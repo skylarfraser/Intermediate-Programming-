@@ -5,10 +5,6 @@ import java.util.Random;
 //Super Store Game
 //B Period
 
-//QUESTIONS: 
-//1. Ask about the add sale issue (says that i cannot make a static reference
-//to a non static method- but when i make the main discount method static
-// it just adds more errors). 
 
 public class SkylarSuperStore {
     static long wallet = 700000000;
@@ -21,7 +17,6 @@ public class SkylarSuperStore {
     static Random rand = new Random();
 
     public static void main(String[] args) throws Exception {
-
         System.out.println(
                 "After being the only one in London to survive the apocalypse (since you hid in the underground bunker of a bank), you now have access to the vault storing hundreds of millionaires’ money and it is up to you to spend all of the money before the state authorities find you.");
         System.out.println(
