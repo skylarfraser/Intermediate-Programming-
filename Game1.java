@@ -1,8 +1,11 @@
+package NumSubFolder;
 import java.util.Scanner;
 import java.util.Random;
 import java.util.ArrayList;
+import NumSubFolder.*;
+//import Game.*;
 
-public class Game1 {
+public class Game1 extends NumberGuessGame{
     // Fields
     int minimum;
     int maximum;
@@ -26,9 +29,10 @@ public class Game1 {
 
     }
 
-    public void mainGame(Scanner sc) {
+    public int mainGame(Scanner sc) {
         int guess = errorChecking(sc, minimum, maximum);
-
+        int attempts = userguess.size();
+        Game1 g;
 
         // If the user guesses a number that they have guessed before, the attempt is
         // not counted
@@ -36,7 +40,7 @@ public class Game1 {
         // The game continues and that specific attempt is not stroed.
         if (userguess.contains(guess)) {
             System.out.println("You have already tried this. Please try again");
-            mainGame(sc);
+            return mainGame(sc);
         }
 
         // If the user guesses the number, they are notified about their win and
@@ -44,10 +48,14 @@ public class Game1 {
         else if (guess == randnum) {
             userguess.add(guess);
             System.out.println("Congratulations! You have guessed the number!");
-            int attempts = userguess.size();
-            System.out.println("You had " + attempts + " attempt(s).");
-            //return;
+            System.out.println("You had " + attempts + " attempt(s).");  
+    
+            return attempts;
 
+           attempts.getScore();
+
+
+            getScore();       
         }
 
         // If the guess is higher than the designated number, the user is notified and
@@ -56,7 +64,7 @@ public class Game1 {
         else if (guess > randnum) {
             userguess.add(guess);
             System.out.println("Go lower!");
-            mainGame(sc);
+            return mainGame(sc);
 
         }
 
@@ -67,17 +75,20 @@ public class Game1 {
         else if (guess < randnum) {
             userguess.add(guess);
             System.out.println("Go higher!");
-            mainGame(sc);
+            return mainGame(sc);
         }
 
-        else if (randnum - guess >= 30 || guess - randnum >= 30 ) {
-            System.out.println("You are more than 30 numbers away. Please try something closer");
+        else if (randnum - guess >= 20 || guess - randnum >= 20 ) {
+            System.out.println("You are more than 20 numbers away. Please try something closer");
+            return mainGame(sc);
 
         }
+        return attempts;
 
 
     }
 
+    
 
     public int errorChecking(Scanner sc, int minimum, int maximum) {
         if (!sc.hasNextInt()) {
@@ -98,8 +109,7 @@ public class Game1 {
     }
 
 
-
-
-
-
 }
+
+    
+
